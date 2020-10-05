@@ -1,0 +1,106 @@
+@import './function.scss';
+@import './global.scss';
+
+@media screen and (min-width:$md-width) {
+  h1 {
+    font-size: $text-big-strong-size;
+  }
+
+  strong,
+  span,
+  li {
+    font-size: $text-big-span-size;
+  }
+}
+
+@media screen and (max-width:$md-width) {
+  h1 {
+    font-size: $text-strong-size;
+  }
+
+  strong,
+  span,
+  li {
+    font-size: $text-span-size;
+  }
+
+  header {
+    display: flex;
+
+    .personal {
+      margin-left: personal($md-width);
+    }
+  }
+
+  main {
+    display: grid;
+
+    .skill {
+      grid-column-start: 3;
+    }
+
+    grid: {
+      template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+    }
+  }
+
+  article {
+    grid-column: 1/3;
+  }
+
+  aside {
+    position: relative;
+    grid-column-start: 3;
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: 2px;
+      height: 100%;
+      left: -15px;
+      background-color: $border-color;
+    }
+  }
+}
+
+@media screen and (max-width:$sm-width) {
+  h1 {
+    font-size: $text-small-strong-size;
+  }
+
+  strong,
+  span,
+  li {
+    font-size: $text-small-span-size;
+  }
+
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  header {
+    display: block;
+    text-align: center;
+
+    .personal {
+      margin-left: personal($sm-width);
+    }
+  }
+
+  article {
+    grid-column: 1/4;
+  }
+
+  aside {
+    grid-column: 1/4;
+
+    &::before {
+      display: none;
+    }
+  }
+}

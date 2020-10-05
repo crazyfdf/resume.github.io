@@ -1,0 +1,60 @@
+@import './global.scss';
+@import './media.scss';
+@import './function.scss';
+
+.main {
+  position: relative;
+  font-size: 0;
+
+  section {
+
+    display: inline-block;
+    width: 360px;
+    padding: 30px;
+    vertical-align: top;
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    @include box-shadow;
+
+    strong {
+      white-space: nowrap;
+
+    }
+
+    strong.longHeader {
+      @include ellipsis(1);
+    }
+  }
+
+  .curriculum-vitae {
+    text-align: center;
+
+    img {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: $text-strong-size;
+    }
+
+    .personal {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .label {
+      color: $li-color;
+    }
+  }
+
+
+
+
+  p {
+    display: flex;
+  }
+}

@@ -1,0 +1,78 @@
+//颜色
+$bgc:#F2F1F2; //主题颜色
+$text-label-color:#F7DD94; //文本标签颜色
+$li-color:#FFC003; //列表序列颜色
+$text-small-color:#7B7A7B; //小号字体颜色
+$border-color:#B4B3B4; //边线颜色
+
+//小屏幕字体大小
+$text-small-strong-size:18px;
+$text-small-span-size:14px;
+
+//中屏幕字体大小
+$text-strong-size:22px;
+$text-span-size:16px;
+
+//大屏幕字体大小
+$text-big-strong-size:26px;
+$text-big-span-size:20px;
+
+//屏幕尺寸
+$sm-width:794px;
+$md-width:1240px;
+$bg-width:1487px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h4,
+strong,
+li,
+span {
+  margin: 10px 0;
+}
+
+dl{
+  margin: 30px 0;
+}
+
+li {
+  margin-left: 20px;
+}
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+body {
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 30px 30px auto;
+  background-color: $bgc;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}

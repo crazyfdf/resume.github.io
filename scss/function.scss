@@ -1,0 +1,29 @@
+@mixin span-box($padding) {
+  background-color: $text-label-color;
+  padding: $padding/2 $padding;
+  border-radius: 20px;
+}
+
+@function personal($width) {
+  @if ($width>794px and $width<1241px) {
+    @return 30px;
+  }
+
+  @return 0;
+}
+
+@mixin box-shadow {
+  -moz-box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+  -webkit-box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+  -ms-box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+  box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+
+}
+
+@mixin ellipsis($column) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $column;
+  -webkit-box-orient: vertical;
+}
