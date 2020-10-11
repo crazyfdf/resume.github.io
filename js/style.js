@@ -34,7 +34,7 @@ window.onload = function () {
         aside.insertBefore(contact, education);
       }
     };
-    if (window.innerWidth > 1360) {
+    if (window.innerWidth > 1240) {
       mainBox.style.display = 'none';
       bgScreen.style.display = 'block';
     }
